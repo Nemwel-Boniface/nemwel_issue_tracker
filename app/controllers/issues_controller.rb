@@ -2,7 +2,7 @@ class IssuesController < ApplicationController
   before_action :set_issue, only: [:edit, :update, :destroy, :update_status]
 
   def create
-    @project = Project.find(params[:project_id])
+    @project = Project.friendly.find(params[:project_id])
     @issue = @project.issues.build(issue_params.merge(user: current_user))
 
     if @issue.save

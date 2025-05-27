@@ -1,7 +1,7 @@
 <% provide(:title, @project.title) %>
 
 <div class="container mt-5">
-  <div class="card">
+  <div class="card mb-4">
     <div class="card-body">
       <h2 class="card-title"><%= @project.title %></h2>
       <p class="card-text"><%= @project.description %></p>
@@ -9,4 +9,8 @@
       <%= link_to 'Back to Projects', projects_path, class: "btn btn-outline-primary" %>
     </div>
   </div>
+
+  <%= render "issues/form", project: @project, issue: Issue.new %>
+
+  <%= render "issues/kanban", project: @project %>
 </div>
