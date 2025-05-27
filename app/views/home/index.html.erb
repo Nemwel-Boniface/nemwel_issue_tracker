@@ -1,0 +1,83 @@
+<% provide(:title, "Home") %>
+
+<section class="hero-section position-relative text-white" style="height: 90vh; background: url('<%= asset_path("landing.jpg") %>') center center / cover no-repeat;">
+  <div class="d-flex justify-content-center align-items-center h-100 bg-dark bg-opacity-50">
+    <div class="text-center">
+      <h1 class="display-4 fw-bold">Welcome to Nemwel's Issue Tracker App</h1>
+      <p class="lead">Manage projects, track issues, visualize progress, and export reports effortlessly.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold">Key Features</h2>
+    <p class="text-muted">Explore the major capabilities of this application.</p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <%= image_tag "projects.jpg", class: "card-img-top", alt: "Projects", style: "height: 200px; object-fit: cover;" %>
+        <div class="card-body text-center">
+          <h5 class="card-title">Projects Resource</h5>
+          <p class="card-text">Create and manage your software development projects with ease.</p>
+          <a href="#" class="btn btn-primary">View Projects</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <%= image_tag "issues.jpg", class: "card-img-top", alt: "Issues", style: "height: 200px; object-fit: cover;" %>
+        <div class="card-body text-center">
+          <h5 class="card-title">Issues Resource</h5>
+          <p class="card-text">Log, prioritize, and monitor issues under each project.</p>
+          <a href="#" class="btn btn-primary">View Issues</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <%= image_tag "charts.jpg", class: "card-img-top", alt: "Charts", style: "height: 200px; object-fit: cover;" %>
+        <div class="card-body text-center">
+          <h5 class="card-title">Reports & Charts</h5>
+          <p class="card-text">Visualize issue status and project performance in real time.</p>
+          <a href="#" class="btn btn-primary">View Charts</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <%= image_tag "export.jpg", class: "card-img-top", alt: "Export", style: "height: 200px; object-fit: cover;" %>
+        <div class="card-body text-center">
+          <h5 class="card-title">Export Reports</h5>
+          <p class="card-text">Download detailed reports in Excel or PDF format for sharing or archiving.</p>
+          <a href="#" class="btn btn-primary">Export</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <%= image_tag "dashboard_preview.jpg", class: "img-fluid rounded shadow", alt: "App Preview", style: "width: 100%; height: 100%; object-fit: cover;" %>
+      </div>
+      <div class="col-md-6">
+        <h3 class="fw-bold">Why This App?</h3>
+        <p>This application was built to demonstrate technical proficiency in Ruby on Rails, focusing on CRUD, reporting, data export, and clean UI using Bootstrap. Whether you're managing tasks, teams, or bugs, this tool provides a clear and flexible way to stay on top of your work.</p>
+        <ul class="list-unstyled">
+          <li>✅ Built with Rails 7 and PostgreSQL</li>
+          <li>✅ Deployed for live access</li>
+          <li>✅ Simple and intuitive design</li>
+          <li>✅ Clean commit history and modular codebase</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
