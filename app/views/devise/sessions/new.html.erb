@@ -1,26 +1,43 @@
-<h2>Log in</h2>
+<% provide(:title, "Sign In") %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="container mt-5">
+  <div class="row min-vh-100 rounded overflow-hidden">
+    <div class="col-md-6 d-none d-md-block p-0 pe-md-3">
+      <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExanJnb2lqaTYwMWYxY3M0dGJlb2R0ajFrYTVlcWVxNG81amk5b3h2MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EddY9gk1YkWAnImfKm/giphy.gif"
+           alt="Login image"
+           class="img-fluid h-100 w-100 object-fit-cover">
     </div>
-  <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="col-md-6 d-flex align-items-center">
+      <div class="w-100 px-4">
+        <h2 class="mb-4">Sign In</h2>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="mb-3">
+            <%= f.label :email, class: 'form-label' %>
+            <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+          </div>
+
+          <div class="mb-3">
+            <%= f.label :password, class: 'form-label' %>
+            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
+          </div>
+
+          <div class="mb-3 form-check">
+            <%= f.check_box :remember_me, class: 'form-check-input' %>
+            <%= f.label :remember_me, class: 'form-check-label' %>
+          </div>
+
+          <div class="d-grid">
+            <%= f.submit "Sign in", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+
+        <hr>
+        <p class="mt-3">
+          Don't have an account? <%= link_to "Sign up", new_registration_path(resource_name) %><br>
+          <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+        </p>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
