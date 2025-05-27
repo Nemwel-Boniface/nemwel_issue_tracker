@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
-  resources :projects
+  resources :projects do
+    resources :issues, only: [:create]
+  end
+
+  resources :issues, only: [:edit, :update, :destroy] do
+    member do
+      patch :update_status
+    end
+  end
+
   devise_for :users
   get 'home/index'
   root "home#index"
