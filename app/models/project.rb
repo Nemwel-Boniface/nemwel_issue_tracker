@@ -9,6 +9,7 @@ class Project < ApplicationRecord
   # Validations
   validates :title, :description, presence: true, length: { minimum: 5 }
 
+  # ensure that our slug is used in the URL instead of the default ID
   def to_param
     slug
   end
