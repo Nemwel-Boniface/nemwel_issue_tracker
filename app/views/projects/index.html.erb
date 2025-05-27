@@ -1,14 +1,36 @@
-<p style="color: green"><%= notice %></p>
+<% provide(:title, 'My Projects') %>
 
-<h1>Projects</h1>
+<div class="container mt-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>My Projects</h2>
+    <%= link_to 'New Project', new_project_path, class: "btn btn-success" %>
+  </div>
 
-<div id="projects">
-  <% @projects.each do |project| %>
-    <%= render project %>
-    <p>
-      <%= link_to "Show this project", project %>
-    </p>
+  <% if @projects.empty? %>
+    <div class="text-center p-5 border rounded bg-light">
+      <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHc1djhlNzRpNzRzZTd3eW5nMnJ1c2NsdjQ2cXNkanZ2ZXc0aHRxbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eIV8AvO3EC3xhscTIW/giphy.gif" class="img-fluid mb-3" alt="No projects" style="max-height: 300px;">
+      <h4 class="text-muted">You don't have any projects yet</h4>
+      <p>Create your first project to get started!</p>
+      <%= link_to 'Create Project', new_project_path, class: "btn btn-primary" %>
+    </div>
+  <% else %>
+    <div class="row">
+      <% @projects.each do |project| %>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><%= project.title %></h5>
+              <p class="card-text"><%= truncate(project.description, length: 100) %></p>
+              <p class="text-muted small mb-2">Owner: <strong><%= project.user.full_names %></strong></p>
+              <div class="d-flex justify-content-between">
+                <%= link_to 'View', project_path(project), class: "btn btn-outline-primary btn-sm" %>
+                <%= link_to 'Edit', edit_project_path(project), class: "btn btn-outline-secondary btn-sm" %>
+                <%= link_to 'Delete', project_path(project), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   <% end %>
 </div>
-
-<%= link_to "New project", new_project_path %>
