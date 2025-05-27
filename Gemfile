@@ -71,3 +71,5 @@ gem 'dotenv-rails', '~> 3.1'
 gem 'rubocop', '~> 1.75'
 
 gem 'devise', '~> 4.9'
+
+gem 'friendly_id', '~> 5.5'

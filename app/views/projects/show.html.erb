@@ -1,0 +1,12 @@
+<% provide(:title, @project.title) %>
+
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title"><%= @project.title %></h2>
+      <p class="card-text"><%= @project.description %></p>
+      <p class="text-muted small">Owner: <strong><%= @project.user.full_names %></strong></p>
+      <%= link_to 'Back to Projects', projects_path, class: "btn btn-outline-primary" %>
+    </div>
+  </div>
+</div>
