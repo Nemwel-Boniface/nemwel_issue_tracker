@@ -1,0 +1,21 @@
+<% project.issues.where(status: status).order(created_at: :desc).each do |issue| %>
+  <div
+    class="card mb-2 draggable"
+    draggable="true"
+    data-issue-id="<%= issue.id %>"
+  >
+    <div class="card-body p-2">
+      <h6 class="mb-1"><%= issue.title %></h6>
+      <p class="mb-1">
+        <span class="badge bg-<%= issue.priority >= 4 ? 'danger' : issue.priority >= 2 ? 'warning' : 'success' %>">
+          Priority <%= issue.priority %>
+        </span>
+      </p>
+      <small class="text-muted">By: <%= issue.user.full_names %></small>
+      <div class="mt-2">
+        <%= link_to 'Edit', edit_issue_path(issue), class: "btn btn-sm btn-outline-primary me-2" %>
+        <%= link_to 'Delete', issue_path(issue), method: :delete, data: { turbo_confirm: 'Delete?' }, class: "btn btn-sm btn-outline-danger" %>
+      </div>
+    </div>
+  </div>
+<% end %>

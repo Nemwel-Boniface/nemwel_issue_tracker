@@ -1,0 +1,23 @@
+<div data-controller="kanban">
+  <div class="row">
+    <% Issue::STATUSES.each do |status| %>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-header text-center bg-light">
+            <strong><%= status %></strong>
+          </div>
+          <div
+            class="card-body p-2"
+            data-kanban-target="column"
+            data-status="<%= status %>"
+            ondragover="event.preventDefault()"
+          >
+            <%= turbo_frame_tag "column_#{status.parameterize}" do %>
+              <%= render partial: "issues/column", locals: { project: project, status: status } %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
