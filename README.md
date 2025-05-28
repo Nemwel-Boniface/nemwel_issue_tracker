@@ -30,7 +30,11 @@ This application will help me practice:
 
 6. Export all project issues in your preferred format: Excel (.xlsx) for spreadsheet analysis. PDF (.pdf) for downloadable, printable summaries.
 
+### Export to Excel
 [Screencast from 28-05-2025 11:29:35 ASUBUHI.webm](https://github.com/user-attachments/assets/a6850a5d-0a18-4f7e-866f-506e69dbd2bc)
+
+### Export to PDF
+[Screencast from 28-05-2025 01:58:11 ALASIRI.webm](https://github.com/user-attachments/assets/3a5d8325-d726-42df-a08a-f3efcc1ac826)
 
 
 ## Live Demo
