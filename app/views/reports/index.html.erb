@@ -1,7 +1,10 @@
 <% provide(:title, "Issue Reports") %>
 
 <div class="container mt-5">
-  <h2 class="mb-4">Issue Report by Status</h2>
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">Issue Report by Status</h2>
+    <%= link_to "Export Project Issues (Excel)", project_issues_export_path(format: :xlsx), class: "btn btn-outline-success" %>
+  </div>
 
   <div class="row">
     <div class="col-md-6">
