@@ -34,7 +34,9 @@ This application will help me practice:
 
 ## Video demonstrations
 I created video demos of the application and the links will be as follows:
-
+1. [Part one ](https://www.loom.com/share/7032bfbfa81d4181b58a5ee95fe7c44d?sid=91c90cac-344e-478d-bf6b-f7f1f19a8046)which shows the GitHub Setup and describes the aim of the project.
+2. [Part two](https://www.loom.com/share/c311ad006e274227a6181e2b31dcd947?sid=be80c8f1-57b1-4f34-a78d-27a954af6815) which shows the working demo live showing user creation, authentication, project and issues creation, drag and drop functionality, reports page, export to both excel and pdf formats.
+3. [Part three](https://www.loom.com/share/364071a252404e2bb8349396a0dbd986?sid=02999d2c-9e62-4b6a-8c1f-9ddf86b8c433), shows the code, some interesting features done and shows the results of the test.
 
 
 ## Future Features
@@ -66,8 +68,7 @@ Enjoy!
 - **Chartkick** – Simple and attractive JavaScript charts.
 - **Axlsx** – Generates Excel (.xlsx) files for reports.
 - **Prawn** – PDF generation for downloadable reports.
-- **Wicked PDF** *(optional alternative)* – PDF generation using HTML templates.
-- **RSpec / Minitest** – For writing and running tests.
+- **Minitest** – For writing and running tests.
 - **StimulusJS + Turbo (Hotwire)** – Enhances interactivity without full page reloads.
 
 
