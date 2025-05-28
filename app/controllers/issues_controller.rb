@@ -15,7 +15,10 @@ class IssuesController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    @issue = Issue.find(params[:id])
+    @project = @issue.project
+  end
 
   def update
     if @issue.update(issue_params)

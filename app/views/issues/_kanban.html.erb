@@ -1,13 +1,14 @@
 <div data-controller="kanban">
-  <div class="row">
+  <div class="row g-3">
     <% Issue::STATUSES.each do |status| %>
-      <div class="col-md-3">
-        <div class="card">
+      <div class="col-md-3 d-flex flex-column">
+        <div class="card w-100 d-flex flex-column">
           <div class="card-header text-center bg-light">
             <strong><%= status %></strong>
           </div>
           <div
-            class="card-body p-2"
+            class="card-body d-flex flex-column gap-2 bg-body-secondary border border-2 border-dashed"
+            style="min-height: 300px; flex-grow: 1;"
             data-kanban-target="column"
             data-status="<%= status %>"
             ondragover="event.preventDefault()"

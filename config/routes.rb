@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :projects do
-    resources :issues, only: [:create]
+    resources :issues, only: [:create, :edit, :update]
   end
 
   resources :issues, only: [:edit, :update, :destroy] do
