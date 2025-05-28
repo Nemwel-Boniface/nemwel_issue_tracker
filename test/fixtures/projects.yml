@@ -4,8 +4,10 @@ one:
   title: The Mountain is Me
   description: This is a text about the mountain being me
   user: one
+  slug: the-mountain-is-me
 
 two:
   title: The obstacle is the way
   description: This is a text about the obstacle being me
   user: two
+  slug: the-obstacle-is-the-way
