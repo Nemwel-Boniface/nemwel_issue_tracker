@@ -16,16 +16,16 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "Should see elements in the projects index" do
+  test 'Should see elements in the projects index' do
     get projects_url
-    assert_select "div div h2", "My Projects"
-    assert_select "div div a", "New Project"
-    assert_select "div h5", @project.title
-    assert_select "div p", @project.description
-    assert_select "div p strong", @project.user.full_names
-    assert_select "div a", "View"
-    assert_select "div a", "Edit"
-    assert_select "div button", "Delete"
+    assert_select 'div div h2', 'My Projects'
+    assert_select 'div div a', 'New Project'
+    assert_select 'div h5', @project.title
+    assert_select 'div p', @project.description
+    assert_select 'div p strong', @project.user.full_names
+    assert_select 'div a', 'View'
+    assert_select 'div a', 'Edit'
+    assert_select 'div button', 'Delete'
   end
 
   test 'should get new' do
@@ -66,8 +66,8 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to projects_url
   end
 
-  test "Cannot delete project" do
-    assert_difference("[Project].count" , 0) do
+  test 'Cannot delete project' do
+    assert_difference('[Project].count', 0) do
       delete project_url(projects(:two))
     end
 

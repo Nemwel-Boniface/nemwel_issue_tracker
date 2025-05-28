@@ -13,7 +13,6 @@ class IssuesControllerTest < ActionDispatch::IntegrationTest
     @issue2 = issues(:three)
   end
 
-
   test 'should not allow user2 to view user1 issue' do
     sign_out @user
     sign_in users(:two)
