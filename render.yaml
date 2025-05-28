@@ -1,7 +1,7 @@
 databases:
  - name: postgres
    ipAllowList: []
-   databaseName: nemwel-issue-tracker-prod
+   databaseName: nemwel_issue_tracker_prod
    user: nemwel
    plan: free
 
