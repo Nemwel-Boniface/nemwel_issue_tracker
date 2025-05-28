@@ -2,14 +2,42 @@
 
 one:
   title: MyString
-  status: MyString
+  status: In Progress
   priority: 1
   project: one
   user: one
 
 two:
   title: MyString
-  status: MyString
-  priority: 1
+  status: Closed
+  priority: 3
+  project: two
+  user: two
+
+three:
+  title: MyString
+  status: New
+  priority: 5
+  project: one
+  user: one
+
+four:
+  title: MyString
+  status: Closed
+  priority: 2
+  project: two
+  user: two
+
+five:
+  title: MyString
+  status: In Review
+  priority: 4
+  project: one
+  user: one
+
+six:
+  title: MyString
+  status: In Progress
+  priority: 2
   project: two
   user: two

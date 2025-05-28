@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
+  title: The Mountain is Me
+  description: This is a text about the mountain being me
   user: one
 
 two:
-  title: MyString
-  description: MyText
+  title: The obstacle is the way
+  description: This is a text about the obstacle being me
   user: two
