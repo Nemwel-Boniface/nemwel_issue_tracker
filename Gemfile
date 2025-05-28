@@ -73,3 +73,7 @@ gem 'rubocop', '~> 1.75'
 gem 'devise', '~> 4.9'
 
 gem 'friendly_id', '~> 5.5'
+
+gem "chartkick", "~> 5.1"
+
+gem "groupdate", "~> 6.6"
