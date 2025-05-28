@@ -77,3 +77,5 @@ gem 'friendly_id', '~> 5.5'
 gem 'chartkick', '~> 5.1'
 
 gem 'axlsx_rails', '~> 0.6.1'
+
+gem "prawn", "~> 2.5"
