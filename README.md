@@ -32,6 +32,23 @@ This application will help me practice:
 
 [Screencast from 28-05-2025 11:29:35 ASUBUHI.webm](https://github.com/user-attachments/assets/a6850a5d-0a18-4f7e-866f-506e69dbd2bc)
 
+
+## Live Demo
+
+You can try out the deployed version of the app here:  
+[https://rails-ciav.onrender.com/](https://rails-ciav.onrender.com/)
+
+### Test Account
+
+Use the following credentials to log in:
+
+- **Email/Username**: `nemwel@gmail.com`  
+- **Password**: `12345678`
+
+Or, feel free to **create your own account** by signing up.  
+> Note: After signing up, you'll need to create your own projects and sample issues. Issues can be assigned a **priority level from 1 to 5**, where 5 is the highest priority and 1 the lowest.
+
+
 ## Video demonstrations
 I created video demos of the application and the links will be as follows:
 1. [Part one ](https://www.loom.com/share/7032bfbfa81d4181b58a5ee95fe7c44d?sid=91c90cac-344e-478d-bf6b-f7f1f19a8046)which shows the GitHub Setup and describes the aim of the project.
