@@ -18,7 +18,7 @@ class ReportsController < ApplicationController
     @projects = Project.includes(:issues)
 
     pdf = Prawn::Document.new
-    pdf.text "Project Issues Report", size: 20, style: :bold, align: :center
+    pdf.text 'Project Issues Report', size: 20, style: :bold, align: :center
     pdf.move_down 20
 
     @projects.each do |project|
@@ -36,7 +36,7 @@ class ReportsController < ApplicationController
         end
       else
         pdf.indent(20) do
-          pdf.text "This project has no issues created", size: 12, style: :italic
+          pdf.text 'This project has no issues created', size: 12, style: :italic
         end
       end
 
@@ -44,9 +44,8 @@ class ReportsController < ApplicationController
     end
 
     send_data pdf.render,
-            filename: "project_issues_#{Date.today}.pdf",
-            type: "application/pdf",
-            disposition: "inline" 
+              filename: "project_issues_#{Date.today}.pdf",
+              type: 'application/pdf',
+              disposition: 'inline'
   end
-
 end

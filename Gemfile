@@ -78,4 +78,4 @@ gem 'chartkick', '~> 5.1'
 
 gem 'axlsx_rails', '~> 0.6.1'
 
-gem "prawn", "~> 2.5"
+gem 'prawn', '~> 2.5'
