@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Issues by Project") do |sheet|
+  sheet.add_row @projects.map(&:title)
+
+  max_issues = @projects.map { |p| p.issues.size }.max
+
+  (0...max_issues).each do |i|
+    row = @projects.map do |project|
+      project.issues[i]&.title
+    end
+    sheet.add_row row
+  end
+end
