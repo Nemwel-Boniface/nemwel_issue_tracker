@@ -7,9 +7,9 @@ class ReportsController < ApplicationController
     @projects = Project.includes(:issues)
 
     respond_to do |format|
-      format.xlsx {
-        response.headers['Content-Disposition'] = "attachment; filename=issues_by_project.xlsx"
-      }
+      format.xlsx do
+        response.headers['Content-Disposition'] = 'attachment; filename=issues_by_project.xlsx'
+      end
     end
   end
 end

@@ -1,6 +1,6 @@
 wb = xlsx_package.workbook
 
-wb.add_worksheet(name: "Issues by Project") do |sheet|
+wb.add_worksheet(name: 'Issues by Project') do |sheet|
   sheet.add_row @projects.map(&:title)
 
   max_issues = @projects.map { |p| p.issues.size }.max
