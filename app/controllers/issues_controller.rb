@@ -1,5 +1,5 @@
 class IssuesController < ApplicationController
-  before_action :set_issue, only: [:edit, :update, :destroy, :update_status]
+  before_action :set_issue, only: %i[edit update destroy update_status]
 
   def create
     @project = Project.friendly.find(params[:project_id])
@@ -22,7 +22,7 @@ class IssuesController < ApplicationController
 
   def update
     if @issue.update(issue_params)
-      redirect_to @issue.project, notice: "Issue updated."
+      redirect_to @issue.project, notice: 'Issue updated.'
     else
       render :edit, status: :unprocessable_entity
     end
@@ -39,9 +39,7 @@ class IssuesController < ApplicationController
   def update_status
     @issue.update(status: params[:status])
     @project = @issue.project
-    respond_to do |format|
-      format.turbo_stream
-    end
+    respond_to(&:turbo_stream)
   end
 
   private
