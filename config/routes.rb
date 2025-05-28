@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'reports/project_issues_export', to: 'reports#project_issues_export', as: 'project_issues_export'
   get '/reports', to: 'reports#index', as: 'reports'
   resources :projects do
     resources :issues, only: [:create, :edit, :update]
