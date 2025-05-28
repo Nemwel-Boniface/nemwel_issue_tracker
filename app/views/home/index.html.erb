@@ -22,7 +22,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Projects Resource</h5>
           <p class="card-text">Create and manage your software development projects with ease.</p>
-          <a href="#" class="btn btn-primary">View Projects</a>
+          <%= link_to 'View Projects', projects_path, class: "btn btn-primary" %>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Issues Resource</h5>
           <p class="card-text">Log, prioritize, and monitor issues under each project.</p>
-          <a href="#" class="btn btn-primary">View Issues</a>
+          <%= link_to 'View Issues', projects_path, class: "btn btn-primary" %>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Reports & Charts</h5>
           <p class="card-text">Visualize issue status and project performance in real time.</p>
-          <a href="#" class="btn btn-primary">View Charts</a>
+          <%= link_to 'View Reports', reports_path, class: "btn btn-primary" %>
         </div>
       </div>
     </div>
@@ -55,14 +55,14 @@
         <div class="card-body text-center">
           <h5 class="card-title">Export Reports</h5>
           <p class="card-text">Download detailed reports in Excel or PDF format for sharing or archiving.</p>
-          <a href="#" class="btn btn-primary">Export</a>
+          <%= link_to 'Export', reports_path, class: "btn btn-primary" %>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="bg-light py-5">
+<section id="About" class="bg-light py-5">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6 mb-4 mb-md-0">
@@ -70,14 +70,48 @@
       </div>
       <div class="col-md-6">
         <h3 class="fw-bold">Why This App?</h3>
-        <p>This application was built to demonstrate technical proficiency in Ruby on Rails, focusing on CRUD, reporting, data export, and clean UI using Bootstrap. Whether you're managing tasks, teams, or bugs, this tool provides a clear and flexible way to stay on top of your work.</p>
+        <p>Nemwel's Issue Tracker is a valuable tool for managing and organizing various challenges and requests that arise during a project's lifecycle. It provides a structured way to capture, track, and resolve issues, ultimately leading to increased efficiency, improved collaboration, and better project outcomes.</p>
         <ul class="list-unstyled">
-          <li>✅ Built with Rails 7 and PostgreSQL</li>
-          <li>✅ Deployed for live access</li>
+          <li>✅ Reduced Errors and Delays</li>
+          <li>✅ Increased Customer Satisfaction</li>
+          <li>✅ Better Resource Management</li>
+          <li>✅ Improved Project Efficiency</li>
           <li>✅ Simple and intuitive design</li>
-          <li>✅ Clean commit history and modular codebase</li>
+          <li>✅ Organization and Transparency</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
+
+<section id="Contact" class="bg-dark text-white py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Contact Me</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <p class="lead">I'd love to connect with you. Feel free to reach out or explore more of my work:</p>
+        
+        <p class="mb-2">
+          <strong>Email:</strong> 
+          <a href="mailto:nemwelnyandoro20@gmail.com" class="text-decoration-none text-info">nemwelnyandoro20@gmail.com</a>
+        </p>
+        
+        <p class="mb-2">
+          <strong>GitHub:</strong> 
+          <a href="https://github.com/Nemwel-Boniface" class="text-decoration-none text-info" target="_blank">github.com/Nemwel-Boniface</a>
+        </p>
+
+        <p class="mb-2">
+          <strong>LinkedIn:</strong> 
+          <a href="https://www.linkedin.com/in/nemwel-nyandoro/" class="text-decoration-none text-info" target="_blank">linkedin.com/in/nemwel-nyandoro</a>
+        </p>
+        
+        <p class="mb-2">
+          <strong>Portfolio:</strong> 
+          <a href="https://nemwelboniface.netlify.app/" class="text-decoration-none text-info" target="_blank">nemwelboniface.netlify.app</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
