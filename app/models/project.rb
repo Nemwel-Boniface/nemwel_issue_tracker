@@ -5,6 +5,7 @@ class Project < ApplicationRecord
 
   # Associations
   belongs_to :user
+  has_many :issues, dependent: :destroy
 
   # Validations
   validates :title, :description, presence: true, length: { minimum: 5 }

@@ -1,0 +1,23 @@
+<div class="card mb-4">
+  <div class="card-body">
+    <h5 class="card-title"><%= issue.new_record? ? "Create New Issue" : "Edit Issue" %></h5>
+
+
+    <%= form_with model: [project, issue], local: false do |f| %>
+      <div class="row">
+        <div class="col-md-6 mb-2">
+          <%= f.label :title %>
+          <%= f.text_field :title, class: "form-control" %>
+        </div>
+        <div class="col-md-4 mb-2">
+          <%= f.label :priority %>
+          <%= f.number_field :priority, class: "form-control", min: 1, max: 5 %>
+        </div>
+        <%= f.hidden_field :status, value: "New" %>
+        <div class="col-md-2 d-flex align-items-end">
+          <%= f.submit(issue.new_record? ? "Create Issue" : "Update Issue", class: "btn btn-primary w-100") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

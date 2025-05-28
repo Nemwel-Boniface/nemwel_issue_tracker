@@ -1,0 +1,3 @@
+<%= turbo_stream.replace "column_#{@issue.status.parameterize}" do %>
+  <%= render partial: "issues/column", locals: { project: @issue.project, status: @issue.status } %>
+<% end %>

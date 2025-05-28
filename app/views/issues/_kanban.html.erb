@@ -1,0 +1,24 @@
+<div data-controller="kanban">
+  <div class="row g-3">
+    <% Issue::STATUSES.each do |status| %>
+      <div class="col-md-3 d-flex flex-column">
+        <div class="card w-100 d-flex flex-column">
+          <div class="card-header text-center bg-light">
+            <strong><%= status %></strong>
+          </div>
+          <div
+            class="card-body d-flex flex-column gap-2 bg-body-secondary border border-2 border-dashed"
+            style="min-height: 300px; flex-grow: 1;"
+            data-kanban-target="column"
+            data-status="<%= status %>"
+            ondragover="event.preventDefault()"
+          >
+            <%= turbo_frame_tag "column_#{status.parameterize}" do %>
+              <%= render partial: "issues/column", locals: { project: project, status: status } %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
