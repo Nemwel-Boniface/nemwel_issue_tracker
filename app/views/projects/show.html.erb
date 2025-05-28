@@ -14,3 +14,19 @@
 
   <%= render "issues/kanban", project: @project %>
 </div>
+
+<div class="container mt-5">
+  <h2 class="mb-4">Issue Report by Project (<%= @project.title %>)</h2>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h5>Pie Chart</h5>
+      <%= pie_chart @project_issues, library: {title: "Issues per Status"} %>
+    </div>
+
+    <div class="col-md-6">
+      <h5>Bar Chart</h5>
+      <%= column_chart @project_issues, library: {title: "Issues per Status"} %>
+    </div>
+  </div>
+</div>

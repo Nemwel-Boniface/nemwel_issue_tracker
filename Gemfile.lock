@@ -123,8 +123,6 @@ GEM
       activerecord (>= 4.0.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    groupdate (6.6.0)
-      activesupport (>= 7.1)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.1.0)
@@ -328,7 +326,6 @@ DEPENDENCIES
   devise (~> 4.9)
   dotenv-rails (~> 3.1)
   friendly_id (~> 5.5)
-  groupdate (~> 6.6)
   importmap-rails
   jbuilder
   pg (~> 1.1)

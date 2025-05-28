@@ -8,7 +8,9 @@ class ProjectsController < ApplicationController
   end
 
   # GET /projects/1 or /projects/1.json
-  def show; end
+  def show
+    @project_issues = @project.issues.group(:status).count
+  end
 
   # GET /projects/new
   def new
